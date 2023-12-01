@@ -4,8 +4,8 @@ html {
 
 p {
     padding: 0px; 
-   margin: 0px;
-   white-space: nowrap
+    margin: 0px;
+    white-space: nowrap;
 }
 
   body {
@@ -18,16 +18,32 @@ p {
 #main-container {
     min-height: 100%;
     display: grid;
-    grid-template-columns: minmax(300px, 18%) 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-columns: minmax(300px, 18%) 2fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+#content-container {
+    display: grid;
+    gap: 20px;
+    margin: 10px 20px 0 20px;
+    grid-template-rows: min-content auto;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    border: solid 2px red;
+    overflow: auto;
+    justify-items: center;
+    align-items: center;
 }
 
 #header {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 2 / 4;
     display: flex;
     flex-direction: column;
     gap: 30px;
     color: #372549;
+    box-shadow: 0 10px 6px -6px lightgrey;
+    z-index: 100;
+    height:auto;
+    overflow: auto;
 }
 
 #sidebar {
@@ -43,6 +59,13 @@ p {
 
 #main-content {
     grid-area: 2 / 2 / 3 / 3;
+}
+
+#left-bar {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.main-content {
     background-color: #FAF3F0;
 }
 
@@ -65,14 +88,16 @@ p {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin: 30px 30px 0 30px;
+    padding: 30px 30px 0 30px;
 }
 
 .header-bottom {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 0 30px 30px 30px;
     margin: 0 30px 0 30px;
+    flex-wrap: wrap;
 }
 
 .search-bar {
@@ -103,6 +128,11 @@ p {
     font-weight: bold;
 }
 
+.button-block {
+    display:flex;
+    gap: 20px;
+}
+
 .button {
     background-color: #774C60;
     border: none;
@@ -111,4 +141,19 @@ p {
     padding: 10px 40px;
     text-align: center;
     font-weight: bold;
+}
+
+.title-projects {
+    border: solid 2px blue;
+    margin: 30px 20px 0 20px;
+}
+
+.title-content {
+    font-size: 18px;
+}
+
+.content-box {
+    height: 200px;
+    width: 100%;
+    border: solid 2px green;
 }
