@@ -5,7 +5,6 @@ html {
 p {
     padding: 0px; 
     margin: 0px;
-    white-space: nowrap;
 }
 
   body {
@@ -18,18 +17,17 @@ p {
 #main-container {
     min-height: 100%;
     display: grid;
-    grid-template-columns: minmax(300px, 18%) 2fr 1fr;
+    grid-template-columns: minmax(300px, 18%) 3fr 1fr;
     grid-template-rows: auto 1fr;
 }
 
 #content-container {
     display: grid;
-    gap: 20px;
+    row-gap: 20px;
+    column-gap: 40px;
     margin: 10px 20px 0 20px;
     grid-template-rows: min-content auto;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
-    border: solid 2px red;
-    overflow: auto;
     justify-items: center;
     align-items: center;
 }
@@ -67,6 +65,7 @@ p {
 
 .main-content {
     background-color: #FAF3F0;
+    color: #372549;
 }
 
 .sidebar-spacing {
@@ -108,6 +107,10 @@ p {
     flex: 1;
 }
 
+.search-bar:hover {
+    border: 1px solid #774C60;
+  }
+
 .name-account {
     font-weight: bold;
 }
@@ -143,17 +146,60 @@ p {
     font-weight: bold;
 }
 
-.title-projects {
-    border: solid 2px blue;
-    margin: 30px 20px 0 20px;
+.button:hover {
+    background-color: #B75D69;
+    color: white;
+  }
+
+#title-projects {
+    margin: 30px 20px 15px 20px;
 }
 
-.title-content {
+.title-section-content {
     font-size: 18px;
+    font-weight: bold;
 }
 
 .content-box {
     height: 200px;
     width: 100%;
-    border: solid 2px green;
+    overflow: auto;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    margin: 0 0 0 10px;
+    position: relative;
+}
+
+.title-box {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px 20px 5px 20px;
+}
+
+.text-box {
+    font-size: 14px;
+    padding:0 20px 0 20px;
+    max-height: 100px;
+    overflow: auto;
+}
+
+.background-content-box {
+    border-radius: 10px;
+    background-color: #B75D69;
+    box-shadow: 10px 3px 6px lightgrey;
+}
+
+.background-content-box:hover {
+    background-color: #774C60;
+  }
+
+.icons-content-box {
+    margin: 20px 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.content-box-icon {
+    margin: 0 0 0 10px;
 }
