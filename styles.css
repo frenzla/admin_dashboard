@@ -26,7 +26,7 @@ p {
     row-gap: 20px;
     column-gap: 40px;
     margin: 10px 20px 0 20px;
-    grid-template-rows: min-content auto;
+    grid-template-rows: 1fr auto;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     justify-items: center;
     align-items: center;
@@ -59,7 +59,7 @@ p {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-#left-bar {
+#right-bar {
     grid-area: 2 / 3 / 3 / 4;
 }
 
@@ -155,19 +155,36 @@ p {
     margin: 30px 20px 15px 20px;
 }
 
+#title-announcements, #title-trending {
+    margin: 30px 20px 15px 20px;
+}
+
 .title-section-content {
     font-size: 18px;
     font-weight: bold;
 }
 
 .content-box {
-    height: 200px;
+    height: 222px;
     width: 100%;
     overflow: auto;
     border-radius: 0 10px 10px 0;
     background-color: white;
     margin: 0 0 0 10px;
     position: relative;
+}
+
+.right-bar-content-box {
+    height: min-content;
+    min-width: 250px;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0 30px 0 20px;
+    box-shadow: 3px 3px 6px lightgrey;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
 }
 
 .title-box {
@@ -181,6 +198,16 @@ p {
     padding:0 20px 0 20px;
     max-height: 100px;
     overflow: auto;
+    
+}
+
+.announc-text-box {
+    max-height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: pre-wrap;
 }
 
 .background-content-box {
@@ -202,4 +229,38 @@ p {
 
 .content-box-icon {
     margin: 0 0 0 10px;
+}
+
+.trending-box {
+    margin: 0 30px 20px 20px;
+    box-shadow: 3px 3px 6px lightgrey;
+}
+
+.separator {
+    border: solid 1px #FAF3F0;
+    width: 80%;
+    align-self: center;
+    margin: 20px 0  0;
+}
+
+.person-tag {
+    font-size: 16px;
+    padding: 0 20px 0 20px;
+}
+
+.person-decrip {
+    font-size: 14px;
+    color:#B75D69;
+    padding: 0 0 0 20px;
+}
+
+.trending-person-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-row {
+    display: flex;
+    align-items: center;
+    margin: 20px 20px 0 20px;
 }
